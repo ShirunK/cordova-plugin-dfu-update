@@ -58,18 +58,22 @@ public class DfuUpdate extends CordovaPlugin {
 
 		if (deviceId.equals("")) {
 			callbackContext.error("Device id is required");
+			return;
 		}
 
 		if (fileURL.equals("")) {
 			callbackContext.error("File URL is required");
+			return;
 		}
 
 		if (!BluetoothAdapter.checkBluetoothAddress(deviceId)) {
 			callbackContext.error("Invalid Bluetooth address");
+			return;
 		}
 
 		if (!ProcessLifecycleOwner.get().getLifecycle().getCurrentState().isAtLeast(Lifecycle.State.STARTED)) {
 			callbackContext.error("App must be in the foreground to start DFU");
+			return;
 		}
 
 		this.dfuCallback = callbackContext;
