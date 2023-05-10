@@ -37,8 +37,8 @@ public class DfuUpdate extends CordovaPlugin {
 	private final String COARSE = Manifest.permission.ACCESS_COARSE_LOCATION;
 	private final String LOCATION_FINE = Manifest.permission.ACCESS_FINE_LOCATION; // For Android 13
 	private final String BLUETOOTH = Manifest.permission.BLUETOOTH;
-	private final String BLUETOOTH_SCAN = Manifest.permission.BLUETOOTH;    // For Android 12
-	private final String BLUETOOTH_CONNECT = Manifest.permission.BLUETOOTH;  // For Android 12
+	private final String BLUETOOTH_SCAN = Manifest.permission.BLUETOOTH_SCAN;    // For Android 12
+	private final String BLUETOOTH_CONNECT = Manifest.permission.BLUETOOTH_CONNECT;  // For Android 12
 	private final String [] permissions = { COARSE, LOCATION_FINE , BLUETOOTH, BLUETOOTH_CONNECT, BLUETOOTH_SCAN};
 
 	@Override
