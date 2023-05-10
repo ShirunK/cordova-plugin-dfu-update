@@ -34,10 +34,14 @@
             <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
             <uses-permission android:name="android.permission.BLUETOOTH"/>
             <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+            <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+            <uses-permission android:name="android.permission.BLUETOOTH_SCAN"/>
+            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
         </config-file>
 
 
-        <preference name="ANDROID_NORDIC_VERSION" default="1.11.0" />
+        <preference name="ANDROID_NORDIC_VERSION" default="2.3.0" />
         <framework src="no.nordicsemi.android:dfu:$ANDROID_NORDIC_VERSION"/>
         <framework src="androidx.lifecycle:lifecycle-extensions:2.2.0"/>
 
