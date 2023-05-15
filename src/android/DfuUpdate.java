@@ -100,7 +100,13 @@ public class DfuUpdate extends CordovaPlugin {
 	}
 
 	private boolean hasPerms() {
+		if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.R) {
+		return cordova.hasPermission(COARSE) && cordova.hasPermission(BLUETOOTH);
+		}
+
+		if (Build.VERSION.SDK_INT > Build.VERSION_CODES.R) {
 		return cordova.hasPermission(COARSE) && cordova.hasPermission(LOCATION_FINE) && cordova.hasPermission(BLUETOOTH_SCAN) && (cordova.hasPermission(BLUETOOTH) || cordova.hasPermission(BLUETOOTH_CONNECT));
+		}
 	}
 
 
